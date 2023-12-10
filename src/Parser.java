@@ -1,9 +1,5 @@
-import com.opencsv.CSVReader;
-import com.opencsv.exceptions.CsvValidationException;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +12,7 @@ public class Parser {
             while ((line = reader.readLine()) != null) {
                 String[] row = line.split(",");
                 if (row[0].equals("Rank")) continue;
-                //if (row[0].equals("25")) break;
+                if (row[0].equals("200")) break;
                 Game game = new Game(row[0], row[1], row[2], row[3], row[4],
                         row[5], row[6], row[7], row[8], row[9], row[10]);
                 games.add(game);
