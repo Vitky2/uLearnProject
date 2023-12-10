@@ -1,5 +1,12 @@
+import java.io.IOException;
+import java.text.ParseException;
+
 public class Main {
-    public static void main(String[] args) {
-        Parser parser = new Parser("game.csv");
+    public static void main(String[] args) throws ParseException, IOException {
+        String path = "res\\game.csv";
+        Parser parser = new Parser(path);
+        for (var a: parser.games) {
+            System.out.println(a);
+        }
     }
 }

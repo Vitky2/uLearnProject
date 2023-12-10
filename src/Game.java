@@ -1,18 +1,18 @@
 public class Game {
-    private final int rank;
+    private final String rank;
     private final String name;
     private final String platform;
-    private final int year;
+    private final String year;
     private final String genre;
     private final String publisher;
-    private final double NA_Sales;
-    private final double EU_Sales;
-    private final double JP_Sales;
-    private final double Other_Sales;
-    private final double Global_Sales;
+    private final String NA_Sales;
+    private final String EU_Sales;
+    private final String JP_Sales;
+    private final String Other_Sales;
+    private final String Global_Sales;
 
-    public Game (int rank, String name, String platform, int year, String genre, String publisher,
-                 double NA_Sales, double EU_Sales, double JP_Sales, double Other_Sales, double Global_Sales) {
+    public Game (String rank, String name, String platform, String year, String genre, String publisher,
+                 String NA_Sales, String EU_Sales, String JP_Sales, String Other_Sales, String Global_Sales) {
         this.rank = rank;
         this.name = name;
         this.platform = platform;
@@ -26,7 +26,7 @@ public class Game {
         this.Global_Sales = Global_Sales;
     }
 
-    public int getRank() {
+    public String getRank() {
         return rank;
     }
 
@@ -38,7 +38,7 @@ public class Game {
         return platform;
     }
 
-    public int getYear() {
+    public String getYear() {
         return year;
     }
 
@@ -50,23 +50,31 @@ public class Game {
         return publisher;
     }
 
-    public double getNA_Sales() {
+    public String getNA_Sales() {
         return NA_Sales;
     }
 
-    public double getEU_Sales() {
+    public String getEU_Sales() {
         return EU_Sales;
     }
 
-    public double getJP_Sales() {
+    public String getJP_Sales() {
         return JP_Sales;
     }
 
-    public double getOther_Sales() {
+    public String getOther_Sales() {
         return Other_Sales;
     }
 
-    public double getGlobal_Sales() {
+    public String getGlobal_Sales() {
         return Global_Sales;
+    }
+
+    @Override
+    public String toString() {
+        String txt = rank + " " + name + " " + platform + " " + year + " " + genre
+                + " " + publisher + " " + NA_Sales + " " + EU_Sales + " " +JP_Sales
+                + " " + Other_Sales + " " + Global_Sales;
+        return txt;
     }
 }
