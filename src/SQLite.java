@@ -42,5 +42,9 @@ public class SQLite {
             e.printStackTrace();
         }
     }
+
+    public static void closeSQLite() throws SQLException {
+        connection.close();
+    }
 }
 

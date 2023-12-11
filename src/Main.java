@@ -18,7 +18,9 @@ public class Main {
             System.out.println(a);
         }
         */
+        Tasks.firstTask();
         Tasks.secondTask();
         Tasks.thirdTask();
+        SQLite.closeSQLite();
     }
 }
