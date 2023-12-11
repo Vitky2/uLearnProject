@@ -10,11 +10,15 @@ public class Main {
         Parser parser = new Parser(pathCSV);
         SQLite sqLite = new SQLite(pathSQLite);
         File file = new File("res\\Games.sqlite");
-        SQLite.createTable(parser, sqLite);
+        if (file.length() == 0) {
+            SQLite.createTable(parser, sqLite);
+        }
         /*
         for (var a: parser.games) {
             System.out.println(a);
         }
         */
+        Tasks.secondTask();
+        Tasks.thirdTask();
     }
 }
