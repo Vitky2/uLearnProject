@@ -5,7 +5,7 @@ import java.text.ParseException;
 
 public class Main {
     public static void main(String[] args) throws ParseException, IOException, SQLException {
-        String pathCSV = "res\\game.csv";
+        String pathCSV = "res\\Игры.csv";
         String pathSQLite = "jdbc:sqlite:res/Games.sqlite";
         Parser parser = new Parser(pathCSV);
         SQLite sqLite = new SQLite(pathSQLite);
@@ -13,11 +13,6 @@ public class Main {
         if (file.length() == 0) {
             SQLite.createTable(parser, sqLite);
         }
-        /*
-        for (var a: parser.games) {
-            System.out.println(a);
-        }
-        */
         Tasks.firstTask();
         Tasks.secondTask();
         Tasks.thirdTask();

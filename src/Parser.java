@@ -12,7 +12,6 @@ public class Parser {
         try  {
             BufferedReader reader = new BufferedReader(new FileReader(path));
             while ((line = reader.readLine()) != null) {
-                //String[] row = line.split(",");
                 ArrayList<String> row = new ArrayList<>(Arrays.asList(line.split(",")));
                 if (row.size() > 11) {
                     for (int i = 0; i < row.size(); i++) {

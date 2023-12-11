@@ -8,6 +8,7 @@ public class SQLite {
         connection = DriverManager.getConnection(path);
         statement = connection.createStatement();
     }
+
     public static void createTable(Parser parser, SQLite sqLite) throws SQLException {
         String request = "CREATE TABLE IF NOT EXISTS Games (" +
                 "rank INTEGER PRIMARY KEY, " +

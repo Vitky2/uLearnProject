@@ -1,12 +1,7 @@
-import java.awt.*;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
-
-import org.jfree.data.category.DefaultCategoryDataset;
-
-import javax.swing.*;
 
 public class Tasks {
 
@@ -18,7 +13,6 @@ public class Tasks {
         while (rs.next()) {
             map.put(rs.getString("platform"), rs.getDouble("Global_Sales"));
         }
-
         Plot.showPlot(map);
     }
 
