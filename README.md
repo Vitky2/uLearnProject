@@ -15,3 +15,9 @@
 ### Результаты 
 #### Задача 1 
 ![график](https://github.com/Vitky2/uLearnProject/assets/128899211/4123bd44-9155-4893-843d-06de75add177)
+
+#### Задача 2 
+![изображение](https://github.com/Vitky2/uLearnProject/assets/128899211/59226986-01fa-4ef3-8165-63587d937a22)
+
+#### Задача 3 
+![изображение](https://github.com/Vitky2/uLearnProject/assets/128899211/72a05fce-b0db-4721-bcdf-d5d2a596477f)
