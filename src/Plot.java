@@ -1,10 +1,13 @@
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
+import org.jfree.chart.ChartUtilities;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.NumberAxis;
 import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.data.category.DefaultCategoryDataset;
 
 import javax.swing.*;
+import java.text.NumberFormat;
 import java.util.Map;
 
 public class Plot {
@@ -14,13 +17,9 @@ public class Plot {
             dataset.addValue(data.getValue(), data.getKey(), "Платформа");
         }
 
-        JFreeChart chart = ChartFactory.createBarChart(
-                "Средние показатели глобальных продаж по платформам",
-                "Платформа",
-                "Показатели продаж",
-                dataset);
+        JFreeChart chart = ChartFactory.createBarChart("Средние показатели глобальных продаж по платформам",
+                "Платформа", "Показатели продаж", dataset);
 
-        CategoryPlot plot = (CategoryPlot) chart.getPlot();
         JFrame frame = new JFrame("First Task");
         frame.getContentPane().add(new ChartPanel(chart));
         frame.setSize(800, 500);
